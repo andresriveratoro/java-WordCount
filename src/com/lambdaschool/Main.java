@@ -27,6 +27,16 @@ public class Main {
         return w2.getValue() - w1.getValue();
       }
     });
+
+    int i = 0;
+    for (HashMap.Entry<String, Integer> w : sortedWords) {
+      if (i < 50) {
+        System.out.println(w.getKey() + ": " + w.getValue());
+        i++;
+      } else {
+        break;
+      }
+    }
   }
 
 }
