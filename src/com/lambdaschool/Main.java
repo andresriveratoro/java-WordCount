@@ -1,8 +1,6 @@
 package com.lambdaschool;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
 
@@ -23,6 +21,12 @@ public class Main {
 
     ArrayList<HashMap.Entry<String, Integer>> sortedWords = new ArrayList<HashMap.Entry<String, Integer>>();
     sortedWords.addAll(wordsHashMap.entrySet());
+
+    Collections.sort(sortedWords, new Comparator<HashMap.Entry<String, Integer>>() {
+      public int compare(HashMap.Entry<String, Integer> w1, HashMap.Entry<String, Integer> w2) {
+        return w2.getValue() - w1.getValue();
+      }
+    });
   }
 
 }
