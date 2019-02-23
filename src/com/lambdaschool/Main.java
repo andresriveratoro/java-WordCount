@@ -1,6 +1,8 @@
 package com.lambdaschool;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
@@ -18,6 +20,9 @@ public class Main {
         wordsHashMap.put(words[i], 1);
       }
     }
+
+    ArrayList<HashMap.Entry<String, Integer>> sortedWords = new ArrayList<HashMap.Entry<String, Integer>>();
+    sortedWords.addAll(wordsHashMap.entrySet());
   }
 
 }
